@@ -1,0 +1,17 @@
+<div>
+  <div (click)="openDropdown()" id="dropdown">
+      <label [(ngModel)]="valueCheckbox" [innerHTML]="valueCheckbox" id="selected-item"></label>
+      <span id="dropdown-arrow" [style.margin]="!arrowCheckbox ? '20px 24px': '25px 24px'" [style.transform]="!arrowCheckbox ? 'rotate(45deg)': 'rotate(225deg)'"></span>
+  </div>
+  <form [formGroup]="formOrder" novalidate id="dropdown-menu" [ngClass]="{'close' : closeDropdown === false}">
+    <div>
+      <input (input)="onSearchInputChange($event)" id="dropdown-search" type="text" name="search" placeholder="Search">
+    </div>
+    <div id="dropdown-list">
+      <label *ngFor="let data of Order; let i=index" class="dropdown-item">
+          <input (change)="onCheckboxChange($event)" [value]="data.name" type="checkbox" class="custom-checkbox">
+          {{data.name}}
+      </label>
+    </div>
+  </form>
+</div>

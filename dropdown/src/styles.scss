@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+html {
+    background-color: black;
+
+    font-family: 'Nexa Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: #161616;
+}
+
+@font-face {
+    font-family: "Nexa Regular";
+    src: url(./assets/NexaRegular.woff) format("woff");
+}
