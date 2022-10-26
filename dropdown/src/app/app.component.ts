@@ -28,8 +28,8 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.Order = [
-      {name: "Abd", value: false},
-      {name: "Cds", value: false}
+      {name: "Poland", value: false},
+      {name: "African", value: false}
     ];
   }
 
